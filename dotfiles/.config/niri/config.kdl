@@ -49,7 +49,7 @@ layout {
 
 //applications autostart
 spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-at-startup "chromium"
+spawn-at-startup "firefox"
 spawn-at-startup "spotify"
 
 window-rule {

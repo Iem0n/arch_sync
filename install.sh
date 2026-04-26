@@ -9,7 +9,7 @@ NC='\033[0m'
 
 DOT_DIR="$(pwd)/dotfiles"
 TARGETS="targets.txt"
-PACKAGES="packages.txt"
+PACKAGES="package.txt"
 
 echo -e "${BLUE}==>${NC} Запуск автоматизации Arch Linux..."
 
