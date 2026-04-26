@@ -1,0 +1,41 @@
+[colors.primary]
+# Используем основной фон и текст из btop 
+background = '#1d1f21'
+foreground = '#c5c8c6'
+
+[colors.cursor]
+# Курсор в цвет текста 
+text = '#1d1f21'
+cursor = '#c5c8c6'
+
+[colors.selection]
+# Цвета выделения как в списке процессов btop 
+background = '#282a2e'
+text = '#c5c8c6'
+
+[colors.normal]
+# Стандартные цвета палитры Tomorrow Night
+black =   '#1d1f21' # 
+red =     '#cc6666' # Из графиков btop 
+green =   '#b5bd68' # Цвет темпа и графиков 
+yellow =  '#f0c674' # Среднее значение графиков 
+blue =    '#81a2be' # Цвет рамок боксов 
+magenta = '#b294bb' # Дополнительный акцент Tomorrow Night
+cyan =    '#81beb7' # Цвет горячих клавиш 
+white =   '#c5c8c6' # 
+
+[colors.bright]
+# Яркие версии (обычно чуть светлее или те же для чистоты)
+black =   '#969896' # 
+red =     '#cc6666'
+green =   '#b5bd68'
+yellow =  '#f0c674'
+blue =    '#81a2be'
+magenta = '#b294bb'
+cyan =    '#81beb7'
+white = '#ffffff'
+[window]
+opacity = 0.95
+blur = true
+
+

@@ -1,69 +1,75 @@
 #!/bin/bash
 
+# Выход при ошибке
 set -e
 
 BLUE='\033[0;34m'
+GREEN='\033[0;32m'
 NC='\033[0m'
+
 DOT_DIR="$(pwd)/dotfiles"
+TARGETS="targets.txt"
+PACKAGES="packages.txt"
 
-mkdir -p "$DOT_DIR"
+echo -e "${BLUE}==>${NC} Запуск автоматизации Arch Linux..."
 
-# --- Функция установки Paru (если нужно) ---
-install_paru() {
-    if ! command -v paru &> /dev/null; then
-        echo -e "${BLUE}==>${NC} Установка Paru..."
-        sudo pacman -S --needed --noconfirm base-devel git
-        TEMP_DIR=$(mktemp -d)
-        git clone https://aur.archlinux.org/paru.git "$TEMP_DIR"
-        cd "$TEMP_DIR" && makepkg -si --noconfirm && cd - && rm -rf "$TEMP_DIR"
-    fi
-}
+# 1. Установка Paru (если нет)
+if ! command -v paru &> /dev/null; then
+    echo -e "${BLUE}==>${NC} Установка базовых зависимостей и Paru..."
+    sudo pacman -S --needed --noconfirm base-devel git
+    TEMP_DIR=$(mktemp -d)
+    git clone https://aur.archlinux.org/paru.git "$TEMP_DIR"
+    cd "$TEMP_DIR" && makepkg -si --noconfirm && cd - && rm -rf "$TEMP_DIR"
+fi
 
-# --- Логика переноса и линковки ---
-sync_configs() {
-    if [ ! -f "targets.txt" ]; then
-        echo "Файл targets.txt не найден! Создай его и впиши пути к конфигам."
-        return
-    fi
+# 2. Установка пакетов
+if [ -f "$PACKAGES" ]; then
+    echo -e "${BLUE}==>${NC} Установка пакетов из $PACKAGES..."
+    paru -S --needed --noconfirm - < "$PACKAGES"
+fi
+
+# 3. Обработка конфигов (Захват и Линковка)
+if [ -f "$TARGETS" ]; then
+    echo -e "${BLUE}==>${NC} Обработка конфигов..."
+    mkdir -p "$DOT_DIR"
 
     while read -r path; do
-        [ -z "$path" ] && continue # Пропускаем пустые строки
+        [ -z "$path" ] && continue
         
         src="$HOME/$path"
         dest="$DOT_DIR/$path"
 
-        if [ -e "$src" ]; then
-            # 1. Если файл в дотфайлах уже есть, а в системе — настоящий файл (не ссылка)
-            # Перемещаем оригинал в репозиторий, если его там еще нет
-            if [ ! -L "$src" ]; then
-                echo -e "${BLUE}==>${NC} Захват конфига: $path"
-                mkdir -p "$(dirname "$dest")"
-                mv "$src" "$dest"
-            fi
+        # Сценарий А: В системе есть реальный файл/папка (надо захватить)
+        if [ -e "$src" ] && [ ! -L "$src" ]; then
+            echo -e "${GREEN}Захват:${NC} $path"
+            mkdir -p "$(dirname "$dest")"
+            
+            # Используем -T чтобы избежать вложенности папок
+            mv -vT "$src" "$dest"
+            
+            # Создаем симлинк
+            ln -sfv "$dest" "$src"
 
-            # 2. Создаем симлинк обратно в систему
+        # Сценарий Б: В системе пусто, но в репозитории файл есть (надо восстановить)
+        elif [ ! -e "$src" ] && [ -e "$dest" ]; then
+            echo -e "${GREEN}Восстановление ссылки:${NC} $path"
             mkdir -p "$(dirname "$src")"
             ln -sfv "$dest" "$src"
-        else
-            echo -e "Предупреждение: $src не найден, пропускаю."
+            
+        # Сценарий В: Ссылка уже на месте
+        elif [ -L "$src" ]; then
+            echo -e "Проверка: $path уже является ссылкой."
         fi
-    done < targets.txt
-}
-
-# --- Основной запуск ---
-install_paru
-
-if [ -f "packages.txt" ]; then
-    echo -e "${BLUE}==>${NC} Установка пакетов..."
-    paru -S --needed --noconfirm - < packages.txt
+    done < "$TARGETS"
+else
+    echo -e "Файл $TARGETS не найден. Пропускаю конфиги."
 fi
 
-sync_configs
-
-# Перенос обоев (опционально)
+# 4. Обои
 if [ -d "wallpapers" ]; then
+    echo -e "${BLUE}==>${NC} Синхронизация обоев..."
     mkdir -p "$HOME/Pictures/wallpapers"
-    cp -v wallpapers/* "$HOME/Pictures/wallpapers/"
+    cp -rf wallpapers/* "$HOME/Pictures/wallpapers/"
 fi
 
-echo -e "${BLUE}==>${NC} Готово! Конфиги перенесены в репозиторий и залинкованы."
+echo -e "${GREEN}==>${NC} Готово! Теперь можно делать git add, commit и push."

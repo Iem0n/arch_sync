@@ -1,0 +1,88 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 4
+    }
+  },
+  "display": {
+    "stat": false,
+    "pipe": false,
+    "showErrors": false,
+    "disableLinewrap": true,
+    "hideCursor": false,
+    "separator": " ❯ ", // Более современный вид [cite: 7]
+    "color": {
+      "keys": "34",      // Синий Tomorrow Night (#81a2be) 
+      "title": "32",     // Зеленый Tomorrow Night (#b5bd68) 
+      "output": "37",    // Светло-серый текст (#c5c8c6) 
+      "separator": "90"  // Темно-серый разделитель (#373b41) 
+    },
+    "brightColor": true,
+    "temp": {
+      "color": {
+        "green": "32",   // Совпадает с theme[temp_start] [cite: 4, 8]
+        "yellow": "33",  // Совпадает с theme[temp_mid] [cite: 4, 8]
+        "red": "31"      // Совпадает с theme[temp_end] [cite: 4, 8]
+      }
+    },
+    "bar": {
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      },
+      "color": {
+        "elapsed": "32", // Индикатор заполнения — зеленый 
+        "total": "90",   // Фон бара — темно-серый 
+        "border": "34"   // Границы — синий (как рамки btop) 
+      }
+    }
+  },
+  "modules": [
+    {
+      "type": "title",
+      "key": " ",
+      "keyIcon": "",
+      "color": {
+        "user": "32",
+        "at": "37",
+        "host": "32"
+      }
+    },
+    {
+      "type": "separator",
+      "string": "-",
+      "outputColor": "90" // Цвет линии-разделителя [cite: 4, 13]
+    },
+    // Все остальные модули унаследуют "34" (синий) для иконок и ключей
+    { "type": "os", "keyIcon": "" },
+    { "type": "host", "keyIcon": "󰌢" },
+    { "type": "kernel", "keyIcon": "" },
+    { "type": "uptime", "keyIcon": "" },
+    { "type": "packages", "keyIcon": "󰏖" },
+    { "type": "shell", "keyIcon": "" },
+    { "type": "display", "keyIcon": "󰍹" },
+    { "type": "de", "keyIcon": "" },
+    { "type": "wm", "keyIcon": "" },
+    { "type": "terminal", "keyIcon": "" },
+    { "type": "cpu", "keyIcon": "" },
+    { "type": "gpu", "keyIcon": "󰾲" },
+    { "type": "memory", "keyIcon": "" },
+    { "type": "disk", "keyIcon": "" },
+    { "type": "battery", "keyIcon": "" },
+    "break",
+    {
+      "type": "colors",
+      "key": " ",
+      "keyIcon": "",
+      "symbol": "block",
+      "block": {
+        "width": 3,
+        "range": [0, 7] // Только основные цвета палитры [cite: 24]
+      }
+    }
+  ]
+}
