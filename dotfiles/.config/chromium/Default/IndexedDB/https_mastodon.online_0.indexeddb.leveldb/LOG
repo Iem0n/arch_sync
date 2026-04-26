@@ -1,5 +1,0 @@
-2026/04/25-17:34:27.628 52f Creating DB /home/vova/.config/chromium/Default/IndexedDB/https_mastodon.online_0.indexeddb.leveldb since it was missing.
-2026/04/25-17:34:27.632 52f Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_mastodon.online_0.indexeddb.leveldb/MANIFEST-000001
-2026/04/25-17:34:28.413 52f Level-0 table #5: started
-2026/04/25-17:34:28.431 52f Level-0 table #5: 1011413 bytes OK
-2026/04/25-17:34:28.433 52f Delete type=0 #3

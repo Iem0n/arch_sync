@@ -1,6 +1,0 @@
-2026/04/11-01:48:04.230 1665 Creating DB /home/vova/.config/chromium/Default/WebStorage/58/IndexedDB/indexeddb.leveldb since it was missing.
-2026/04/11-01:48:04.234 1665 Reusing MANIFEST /home/vova/.config/chromium/Default/WebStorage/58/IndexedDB/indexeddb.leveldb/MANIFEST-000001
-2026/04/11-01:52:11.132 1665 Level-0 table #5: started
-2026/04/11-01:52:11.135 1665 Level-0 table #5: 131095 bytes OK
-2026/04/11-01:52:11.138 1665 Delete type=0 #3
-2026/04/11-01:52:11.138 1665 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

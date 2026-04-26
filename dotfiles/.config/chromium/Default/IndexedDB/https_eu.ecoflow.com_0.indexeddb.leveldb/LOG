@@ -1,6 +1,0 @@
-2026/03/30-00:12:18.799 140ac Creating DB /home/vova/.config/chromium/Default/IndexedDB/https_eu.ecoflow.com_0.indexeddb.leveldb since it was missing.
-2026/03/30-00:12:18.802 140ac Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_eu.ecoflow.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/03/30-00:12:21.843 140bb Level-0 table #5: started
-2026/03/30-00:12:21.845 140bb Level-0 table #5: 7666 bytes OK
-2026/03/30-00:12:21.847 140bb Delete type=0 #3
-2026/03/30-00:12:21.847 140ad Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
