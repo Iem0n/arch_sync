@@ -1,0 +1,24 @@
+2026/04/26-14:57:28.121 5 Reusing MANIFEST /home/vova/.config/chromium/Default/Session Storage/MANIFEST-000001
+2026/04/26-14:57:28.122 5 Recovering log #459
+2026/04/26-14:57:28.122 5 Reusing old log /home/vova/.config/chromium/Default/Session Storage/000459.log 
+2026/04/26-15:24:50.123 7 Level-0 table #464: started
+2026/04/26-15:24:50.129 7 Level-0 table #464: 63476 bytes OK
+2026/04/26-15:24:50.131 7 Delete type=0 #459
+2026/04/26-15:25:54.026 7 Level-0 table #466: started
+2026/04/26-15:25:54.032 7 Level-0 table #466: 44620 bytes OK
+2026/04/26-15:25:54.034 7 Delete type=0 #463
+2026/04/26-15:25:59.099 7 Level-0 table #468: started
+2026/04/26-15:25:59.105 7 Level-0 table #468: 88596 bytes OK
+2026/04/26-15:25:59.110 7 Delete type=0 #465
+2026/04/26-17:11:41.253 5 Level-0 table #470: started
+2026/04/26-17:11:41.260 5 Level-0 table #470: 82306 bytes OK
+2026/04/26-17:11:41.263 5 Delete type=0 #467
+2026/04/26-17:11:41.264 5 Compacting 4@0 + 1@1 files
+2026/04/26-17:11:41.275 5 Generated table #471@0: 12419 keys, 531904 bytes
+2026/04/26-17:11:41.275 5 Compacted 4@0 + 1@1 files => 531904 bytes
+2026/04/26-17:11:41.277 5 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/04/26-17:11:41.278 5 Delete type=2 #461
+2026/04/26-17:11:41.278 5 Delete type=2 #470
+2026/04/26-17:11:41.278 5 Delete type=2 #468
+2026/04/26-17:11:41.278 5 Delete type=2 #464
+2026/04/26-17:11:41.278 5 Delete type=2 #466

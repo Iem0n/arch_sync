@@ -1,0 +1,6 @@
+2026/04/06-00:13:38.327 5ac Creating DB /home/vova/.config/chromium/Default/IndexedDB/https_music.youtube.com_0.indexeddb.leveldb since it was missing.
+2026/04/06-00:13:38.332 5ac Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_music.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/06-00:25:09.323 5ab Level-0 table #5: started
+2026/04/06-00:25:09.330 5ab Level-0 table #5: 1081625 bytes OK
+2026/04/06-00:25:09.333 5ab Delete type=0 #3
+2026/04/06-00:25:09.334 5ab Manual compaction at level-0 from (begin) .. (end); will stop at (end)

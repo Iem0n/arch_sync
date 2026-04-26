@@ -1,0 +1,6 @@
+2026/04/02-12:19:22.294 788 Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/02-12:19:22.294 788 Recovering log #3
+2026/04/02-12:19:22.295 788 Reusing old log /home/vova/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000003.log 
+2026/04/02-12:19:45.380 789 Level-0 table #5: started
+2026/04/02-12:19:45.405 789 Level-0 table #5: 3191174 bytes OK
+2026/04/02-12:19:45.409 789 Delete type=0 #3

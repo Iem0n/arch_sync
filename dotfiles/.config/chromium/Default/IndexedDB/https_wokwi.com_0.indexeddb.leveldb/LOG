@@ -1,0 +1,29 @@
+2026/04/10-22:56:46.608 1664 Creating DB /home/vova/.config/chromium/Default/IndexedDB/https_wokwi.com_0.indexeddb.leveldb since it was missing.
+2026/04/10-22:56:46.612 1664 Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_wokwi.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/10-22:56:46.619 1671 Level-0 table #5: started
+2026/04/10-22:56:46.622 1671 Level-0 table #5: 1264 bytes OK
+2026/04/10-22:56:46.625 1671 Delete type=0 #3
+2026/04/10-22:56:46.626 1671 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/04/10-22:56:58.817 1671 Level-0 table #7: started
+2026/04/10-22:56:58.819 1671 Level-0 table #7: 1912 bytes OK
+2026/04/10-22:56:58.820 1671 Delete type=0 #4
+2026/04/10-22:56:58.821 1664 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/04/10-23:02:30.085 1665 Level-0 table #9: started
+2026/04/10-23:02:30.087 1665 Level-0 table #9: 359 bytes OK
+2026/04/10-23:02:30.089 1665 Delete type=0 #6
+2026/04/10-23:02:30.089 1665 Manual compaction at level-0 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x05\x00_\x00_\x00s\x00a\x00k' @ 151 : 1
+2026/04/10-23:02:30.089 1665 Compacting 1@0 + 1@1 files
+2026/04/10-23:02:30.091 1665 Generated table #10@0: 50 keys, 1269 bytes
+2026/04/10-23:02:30.091 1665 Compacted 1@0 + 1@1 files => 1269 bytes
+2026/04/10-23:02:30.093 1665 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/04/10-23:02:30.094 1665 Delete type=2 #9
+2026/04/10-23:02:30.094 1665 Delete type=2 #7
+2026/04/10-23:02:30.094 1665 Manual compaction at level-0 from '\x00\x02\x01\x02\x01\x05\x00_\x00_\x00s\x00a\x00k' @ 151 : 1 .. (end); will stop at (end)
+2026/04/10-23:02:30.094 1665 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x007\x000\x006\x007\x005\x001\x007\x004\x002\x003\x003\x002\x00:\x00w\x00e\x00b\x00:\x00d\x00a\x00b\x00e\x008\x00c\x00f\x00a\x00e\x00a\x002\x007\x00a\x002\x005\x006\x007\x004\x00a\x004\x00f\x009' @ 122 : 1
+2026/04/10-23:02:30.094 1665 Compacting 1@1 + 1@2 files
+2026/04/10-23:02:30.096 1665 Generated table #11@1: 33 keys, 1062 bytes
+2026/04/10-23:02:30.096 1665 Compacted 1@1 + 1@2 files => 1062 bytes
+2026/04/10-23:02:30.097 1665 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/04/10-23:02:30.098 1665 Delete type=2 #10
+2026/04/10-23:02:30.098 1665 Delete type=2 #5
+2026/04/10-23:02:30.098 1665 Manual compaction at level-1 from '\x00\x03\x01\x02\x013\x00[\x00D\x00E\x00F\x00A\x00U\x00L\x00T\x00]\x00!\x001\x00:\x007\x000\x006\x007\x005\x001\x007\x004\x002\x003\x003\x002\x00:\x00w\x00e\x00b\x00:\x00d\x00a\x00b\x00e\x008\x00c\x00f\x00a\x00e\x00a\x002\x007\x00a\x002\x005\x006\x007\x004\x00a\x004\x00f\x009' @ 122 : 1 .. (end); will stop at (end)

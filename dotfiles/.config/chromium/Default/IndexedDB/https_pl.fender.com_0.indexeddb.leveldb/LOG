@@ -1,0 +1,6 @@
+2026/04/25-18:30:26.559 52f Creating DB /home/vova/.config/chromium/Default/IndexedDB/https_pl.fender.com_0.indexeddb.leveldb since it was missing.
+2026/04/25-18:30:26.562 52f Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_pl.fender.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/25-18:30:34.372 52f Level-0 table #5: started
+2026/04/25-18:30:34.373 52f Level-0 table #5: 8283 bytes OK
+2026/04/25-18:30:34.375 52f Delete type=0 #3
+2026/04/25-18:30:34.375 52f Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,0 +1,24 @@
+2026/04/12-08:13:02.102 5c3 Reusing MANIFEST /home/vova/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/12-08:13:02.102 5c3 Recovering log #4
+2026/04/12-08:13:02.109 5c3 Reusing old log /home/vova/.config/chromium/Default/IndexedDB/https_mail.google.com_0.indexeddb.leveldb/000004.log 
+2026/04/12-08:13:14.222 5c3 Level-0 table #8: started
+2026/04/12-08:13:14.245 5c3 Level-0 table #8: 3221983 bytes OK
+2026/04/12-08:13:14.248 5c3 Delete type=0 #4
+2026/04/12-08:13:40.096 5c5 Compacting 1@1 + 1@2 files
+2026/04/12-08:13:40.133 5c5 Generated table #9@1: 208 keys, 859108 bytes
+2026/04/12-08:13:40.133 5c5 Compacted 1@1 + 1@2 files => 859108 bytes
+2026/04/12-08:13:40.135 5c5 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/04/12-08:13:40.136 5c5 Delete type=2 #8
+2026/04/12-08:13:40.136 5c5 Delete type=2 #5
+2026/04/12-08:14:21.613 5c5 Level-0 table #11: started
+2026/04/12-08:14:21.627 5c5 Level-0 table #11: 2149561 bytes OK
+2026/04/12-08:14:21.631 5c5 Delete type=0 #7
+2026/04/12-08:14:21.631 5c5 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2026/04/12-08:14:21.632 5c5 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01(\x00S\x00t\x00o\x00r\x00e\x00d\x00N\x00e\x00t\x00w\x00o\x00r\x00k\x00F\x00e\x00t\x00c\x00h\x00C\x00o\x00u\x00n\x00t\x00e\x00r\x00s\x00:\x00:\x00S\x00T\x00A\x00T\x00I\x00C\x00_\x00A\x00S\x00S\x00E\x00T' @ 4436 : 0
+2026/04/12-08:14:21.632 5c5 Compacting 1@1 + 1@2 files
+2026/04/12-08:14:21.640 5c5 Generated table #12@1: 108 keys, 246910 bytes
+2026/04/12-08:14:21.640 5c5 Compacted 1@1 + 1@2 files => 246910 bytes
+2026/04/12-08:14:21.642 5c5 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/04/12-08:14:21.643 5c5 Delete type=2 #9
+2026/04/12-08:14:21.643 5c5 Delete type=2 #11
+2026/04/12-08:14:21.644 5c5 Manual compaction at level-1 from '\x00\x01\x01\x02\x01(\x00S\x00t\x00o\x00r\x00e\x00d\x00N\x00e\x00t\x00w\x00o\x00r\x00k\x00F\x00e\x00t\x00c\x00h\x00C\x00o\x00u\x00n\x00t\x00e\x00r\x00s\x00:\x00:\x00S\x00T\x00A\x00T\x00I\x00C\x00_\x00A\x00S\x00S\x00E\x00T' @ 4436 : 0 .. (end); will stop at (end)

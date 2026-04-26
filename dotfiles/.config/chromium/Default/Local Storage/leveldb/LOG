@@ -1,0 +1,20 @@
+2026/04/26-14:57:21.736 5 Reusing MANIFEST /home/vova/.config/chromium/Default/Local Storage/leveldb/MANIFEST-000001
+2026/04/26-14:57:21.759 5 Recovering log #691
+2026/04/26-14:57:21.765 5 Reusing old log /home/vova/.config/chromium/Default/Local Storage/leveldb/000691.log 
+2026/04/26-15:24:39.197 7 Level-0 table #695: started
+2026/04/26-15:24:39.202 7 Level-0 table #695: 16070 bytes OK
+2026/04/26-15:24:39.208 7 Delete type=0 #691
+2026/04/26-15:24:39.208 7 Compacting 4@0 + 2@1 files
+2026/04/26-15:24:39.242 7 Generated table #696@0: 1866 keys, 2179611 bytes
+2026/04/26-15:24:39.262 7 Generated table #697@0: 1066 keys, 1425817 bytes
+2026/04/26-15:24:39.262 7 Compacted 4@0 + 2@1 files => 3605428 bytes
+2026/04/26-15:24:39.265 7 compacted to: files[ 0 2 1 0 0 0 0 ]
+2026/04/26-15:24:39.267 7 Delete type=2 #690
+2026/04/26-15:24:39.267 7 Delete type=2 #692
+2026/04/26-15:24:39.267 7 Delete type=2 #684
+2026/04/26-15:24:39.267 7 Delete type=2 #687
+2026/04/26-15:24:39.267 7 Delete type=2 #695
+2026/04/26-15:24:39.267 7 Delete type=2 #683
+2026/04/26-17:30:48.306 7 Level-0 table #699: started
+2026/04/26-17:30:48.315 7 Level-0 table #699: 17761 bytes OK
+2026/04/26-17:30:48.318 7 Delete type=0 #694
