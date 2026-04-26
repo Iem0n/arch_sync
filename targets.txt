@@ -5,6 +5,3 @@
 .config/btop
 .config/fastfetch
 .config/noctalia
-.config/chromium
-.config/mozilla
-.config/obsidian
