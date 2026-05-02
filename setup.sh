@@ -58,7 +58,7 @@ echo "==> Generating fstab..."
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "==> Copying post-install sript..."
-cp post_install.sh /mnt/post-install.sh
+cp post-install.sh /mnt/post-install.sh
 chmod +x /mnt/post-install.sh
 
 echo "==> Enter in chroot..."
