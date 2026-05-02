@@ -6,9 +6,7 @@ niri
 noctalia-shell
 fuzzel
 btop
-steam
 alacritty
-qbittorent
 wine
 greetd
 greetd-tuigreet
@@ -23,3 +21,4 @@ xwayland-satellite
 xdg-desktop-portal-gnome
 qt6-multimedia-ffmpeg
 xdg-desktop-portal-gtk
+ttf-jetbrains-mono-nerd

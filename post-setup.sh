@@ -57,6 +57,24 @@ echo "==> loading dotfiles..."
 su - "$USER" -c "git clone https://github.com/Iem0n/arch_sync.git ~/my-dotfiles"
 su - "$USER" -c "cd ~/my-dotfiles && ./install.sh"
 
+echo "==> installing greetd and tuigreet..."
+pacman -S --noconfirm greetd greetd-tuigreet
+
+echo "==> Configurating greetd..."
+[ -f /etc/greetd/config.toml ] && mv /etc/greetd/config.toml /etc/greetd/config.toml.bak
+
+cat <<EOF > /etc/greetd/config.toml
+[terminal]
+vt = 1
+
+[default_session]
+command = "tuigreet --time --remember --cmd 'dbus-run-session /home/vova/.local/bin/niri-session'"
+user = "greeter"
+EOF
+
+echo "==> Enabling greetd service..."
+systemctl enable greetd.service
+
 echo "==> Generating ZRAM..."
 pacman -S zram-generator
 cat <<EOF > /etc/systemd/zram-generator.conf
