@@ -1,4 +1,4 @@
-#!/bash/bin
+#!/bin/bash
 set -e
 
 echo "==> List of avalible drives:"
