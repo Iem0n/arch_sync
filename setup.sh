@@ -24,7 +24,6 @@ if [[ $MODE == "1" ]]; then
     FORMAT_EFI=false
     echo "MODE: Dualboot. EFI ($EFI_PART) will not be formated."
 elif [[ $MODE == "2" ]]; then
-    # Для режима "Only Linux" обычно используют p1 (EFI) и p2 (Root)
     EFI_PART="${DISK}${P}1"
     ROOT_PART="${DISK}${P}2"
     FORMAT_EFI=true
@@ -39,11 +38,11 @@ read -p "Continue? (y/n): " confirm
 [[ $confirm != "y" ]] && exit 1
 
 echo "==>  Formating root..."
-mkfs.ext4 -F "$ROOT_PART"
+mkfs.ext4 "$ROOT_PART"
 
 if [ "$FORMAT_EFI" = true ]; then
     echo "==> Formating EFI..."
-    mkfs.fat -F32 "$EFI_PART"
+    mkfs.fat -F 32 "$EFI_PART"
 fi
 
 echo "==> Mounting parts..."
