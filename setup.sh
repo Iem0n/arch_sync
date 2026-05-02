@@ -58,11 +58,11 @@ echo "==> Generating fstab..."
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "==> Copying post-install sript..."
-cp post_install.sh /mnt/post_install.sh
-chmod +x /mnt/post_install.sh
+cp post_install.sh /mnt/post-install.sh
+chmod +x /mnt/post-install.sh
 
 echo "==> Enter in chroot..."
-arch-chroot /mnt ./post-install.sh "vova" "vova-pc" "$ROOT"
+arch-chroot /mnt ./post-install.sh "vova" "vova-pc" "$ROOT_PART"
 
 read -p "system instaled! press ENTER for reboot"
 
