@@ -46,6 +46,11 @@ if [ "$FORMAT_EFI" = true ]; then
     mkfs.fat -F32 "$EFI_PART"
 fi
 
+echo "==> Mounting parts..."
+mount "$ROOT_PART" /mnt
+mkdir -p /mnt/boot
+mount "$EFI_PART" /mnt/boot
+
 echo "==> Installing base system..."
 pacstrap -K /mnt base linux linux-firmware linux-headers amd-ucode base-devel networkmanager neovim efibootmgr git
 
