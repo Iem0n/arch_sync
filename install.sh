@@ -72,4 +72,4 @@ if [ -d "wallpapers" ]; then
     cp -rf wallpapers/* "$HOME/Pictures/wallpapers/"
 fi
 
-echo -e "${GREEN}==>${NC} Готово! Теперь можно делать git add, commit и push."
+echo -e "${GREEN}==>${NC} Готово!"
