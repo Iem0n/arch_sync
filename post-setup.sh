@@ -53,17 +53,17 @@ initrd  /initramfs-linux.img
 options root=UUID=$UUID rw
 EOF
 
+echo "==> loading dotfiles..."
+su - "$USER" -c "git clone https://github.com/Iem0n/arch_sync.git ~/my-dotfiles"
+su - "$USER" -c "cd ~/my-dotfiles && ./install.sh"
+
 echo "==> Generating ZRAM..."
-pacman -S --noconfirm zram-generator
+pacman -S zram-generator
 cat <<EOF > /etc/systemd/zram-generator.conf
 [zram0]
 zram-size = ram / 2
 compression-algorithm = zstd
 EOF
-
-echo "==> loading dotfiles..."
-su - "$USER" -c "git clone https://github.com/Iem0n/arch_sync.git ~/my-dotfiles"
-su - "$USER" -c "cd ~/my-dotfiles && ./install.sh"
 
 echo "==> Завершение настройки в chroot."
 
