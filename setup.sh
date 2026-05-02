@@ -57,12 +57,12 @@ pacstrap -K /mnt base linux linux-firmware linux-headers amd-ucode base-devel ne
 echo "==> Generating fstab..."
 genfstab -U /mnt >> /mnt/etc/fstab
 
-echo "==> Copying post-install sript..."
-cp post-install.sh /mnt/post-install.sh
-chmod +x /mnt/post-install.sh
+echo "==> Copying post-setup sript..."
+cp post-setup.sh /mnt/post-setup.sh
+chmod +x /mnt/post-setup.sh
 
 echo "==> Enter in chroot..."
-arch-chroot /mnt ./post-install.sh "vova" "vova-pc" "$ROOT_PART"
+arch-chroot /mnt ./post-setup.sh "vova" "vova-pc" "$ROOT_PART"
 
 read -p "system instaled! press ENTER for reboot"
 
