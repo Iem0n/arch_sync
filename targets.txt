@@ -5,3 +5,4 @@
 .config/btop
 .config/fastfetch
 .config/noctalia
+.local/bin/niri-session
