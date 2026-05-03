@@ -1,0 +1,8 @@
+#!/bin/sh
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=niri
+export XDG_SESSION_DESKTOP=niri
+
+export GTK_USE_PORTAL=1
+
+exec niri "$@"
