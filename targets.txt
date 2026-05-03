@@ -6,3 +6,5 @@
 .config/fastfetch
 .config/noctalia
 .local/bin/niri-session
+.bashrc
+.bash_profile
