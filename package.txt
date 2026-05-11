@@ -22,3 +22,4 @@ xdg-desktop-portal-gtk
 ttf-jetbrains-mono-nerd
 bluez
 bluez-utils
+openssh
