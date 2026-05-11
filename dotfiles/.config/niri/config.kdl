@@ -49,17 +49,8 @@ layout {
 
 //applications autostart
 spawn-sh-at-startup "qs -c noctalia-shell"
-spawn-at-startup "firefox"
-spawn-at-startup "spotify"
 
-window-rule {
-  match app-id="spotify"
-  open-on-workspace "2"
-}
-
-hotkey-overlay {
-    skip-at-startup
-}
+hotkey-overlay { skip-at-startup; }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 

@@ -1,7 +1,5 @@
-neovim
 telegram-desktop
 firefox
-obsidian
 niri
 noctalia-shell
 fuzzel
@@ -22,3 +20,5 @@ xdg-desktop-portal-gnome
 qt6-multimedia-ffmpeg
 xdg-desktop-portal-gtk
 ttf-jetbrains-mono-nerd
+bluez
+bluez-utils
