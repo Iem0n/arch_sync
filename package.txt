@@ -6,11 +6,8 @@ fuzzel
 btop
 alacritty
 wine
-greetd
-greetd-tuigreet
 fastfetch
 linux-headers
-zram-generator
 cpupower
 spotify-launcher
 zenity
@@ -23,3 +20,7 @@ ttf-jetbrains-mono-nerd
 bluez
 bluez-utils
 openssh
+wireplumber
+pipewire
+pipewire-alsa
+noto-fonts-cjk

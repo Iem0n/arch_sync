@@ -72,4 +72,6 @@ if [ -d "wallpapers" ]; then
     cp -rf wallpapers/* "$HOME/Pictures/wallpapers/"
 fi
 
+fc-cache -fv
+
 echo -e "${GREEN}==>${NC} Готово!"

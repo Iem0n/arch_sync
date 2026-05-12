@@ -647,7 +647,7 @@
         "boxBorderEnabled": true,
         "fontDefault": "JetBrainsMono Nerd Font",
         "fontDefaultScale": 1.1099999999999999,
-        "fontFixed": "monospace",
+        "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1.1099999999999999,
         "panelBackgroundOpacity": 0.93,
         "panelsAttachedToBar": true,
