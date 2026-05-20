@@ -1,5 +1,4 @@
 .config/niri
-.config/nvim
 .config/alacritty
 .config/fuzzel
 .config/btop
