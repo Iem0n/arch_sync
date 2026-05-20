@@ -31,8 +31,8 @@ layout {
     
   focus-ring {
     width 1.0
-    active-color "#81a2be"
-	  inactive-color "#505050"
+    active-color "#b8bb26"
+	inactive-color "#3c3836"
   }
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
     // You can think of them as a kind of outer gaps. They are set in logical pixels.

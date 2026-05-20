@@ -6,8 +6,6 @@ fuzzel
 btop
 alacritty
 wine
-fastfetch
-linux-headers
 cpupower
 spotify-launcher
 zenity

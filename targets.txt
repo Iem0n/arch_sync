@@ -2,6 +2,5 @@
 .config/alacritty
 .config/fuzzel
 .config/btop
-.config/fastfetch
 .config/noctalia
 .local/bin/niri-session
