@@ -2,7 +2,7 @@ prefer-no-csd
 input {
   keyboard {
     xkb {
-      layout "us,ru,ua"
+      layout "us,ru"
       options "grp:alt_shift_toggle"
     }
   }
@@ -15,7 +15,7 @@ input {
 }
 
 output "eDP-1" {
-  mode "1920x1080@144.063"
+  mode "1920x1200@60.003"
 	hot-corners { off; }
 }
 
