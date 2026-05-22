@@ -16,7 +16,8 @@ input {
 
 output "eDP-1" {
   mode "1920x1200@60.003"
-	hot-corners { off; }
+  scale 1.5
+  hot-corners { off; }
 }
 
 layout {
