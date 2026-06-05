@@ -7,4 +7,4 @@
 .config/helix
 .config/fastfetch
 .local/bin/niri-session
-~/.bashrc
+.bashrc
