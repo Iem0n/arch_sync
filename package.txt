@@ -29,3 +29,4 @@ mako
 swaylock-effects-git
 swaybg
 libnotify
+fastfetch
