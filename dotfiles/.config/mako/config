@@ -1,0 +1,19 @@
+# ~/.config/mako/config
+font=JetBrainsMono Nerd Font 11
+background-color=#1d1f21dd
+text-color=#ffffffff
+border-size=2
+border-color=#333333ff
+border-radius=10
+progress-color=#282a2eff
+
+# Отступы внутри карточки
+padding=15
+margin=10
+
+# Время отображения (в миллисекундах, 5 секунд)
+default-timeout=5000
+
+[urgency=high]
+border-color=#e67e80ff
+text-color=#e67e80ff

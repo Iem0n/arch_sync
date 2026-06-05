@@ -1,0 +1,23 @@
+theme = "my_monochrome" # Указываем имя нашей будущей кастомной темы
+
+[editor]
+line-number = "relative"
+mouse = true
+bufferline = "multiple"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace]
+render = "all"
+characters = { space = "·", tab = "→" }
+
+[editor.indent-guides]
+render = true
+character = "│"

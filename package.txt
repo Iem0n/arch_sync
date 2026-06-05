@@ -1,7 +1,6 @@
 telegram-desktop
 firefox
 niri
-noctalia-shell
 fuzzel
 btop
 alacritty
@@ -11,7 +10,7 @@ spotify-launcher
 zenity
 ffmpeg
 xwayland-satellite
-xdg-desktop-portal-gnome
+xdg-desktop-portal-wlr
 qt6-multimedia-ffmpeg
 xdg-desktop-portal-gtk
 ttf-jetbrains-mono-nerd
@@ -23,3 +22,10 @@ pipewire
 pipewire-alsa
 noto-fonts-cjk
 unzip
+waybar
+yazi
+7zip
+mako
+swaylock-effects-git
+swaybg
+libnotify

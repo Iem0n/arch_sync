@@ -2,5 +2,9 @@
 .config/alacritty
 .config/fuzzel
 .config/btop
-.config/noctalia
+.config/waybar
+.config/mako
+.config/helix
+.config/fastfetch
 .local/bin/niri-session
+~/.bashrc
