@@ -30,6 +30,7 @@ window#waybar {
 #network,
 #wireplumber,
 #battery,
+#tray,
 #group-session {
     padding: 0 6px;
     margin: 0;

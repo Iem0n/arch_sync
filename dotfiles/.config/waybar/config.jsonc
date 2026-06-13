@@ -12,6 +12,7 @@
         "clock"
     ],
     "modules-right": [
+        "tray",              // Добавили системный трей сюда
         "wireplumber#sink",
         "network",
         "battery",
@@ -20,21 +21,27 @@
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": ""
+            // Сменили иконки на минималистичные палочки/цифры или пустые кружки
+            "active": "󰮯", 
+            "default": "◇",
+            "urgent": "󰀨"
         }
     },
     "clock": {
-        "format": "{:%H:%M  %d %b}",
+        // Убрали один пробел между временем и датой (остался ровно один)
+        "format": "{:%H:%M %d %b}", 
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "temperature": {
-        "thermal-zone": 0, // Если не заведуется, можно убрать эту строку или поменять индекс
+        "thermal-zone": 0,
         "critical-threshold": 80,
-        "format": " {temperatureC}°C",
-        "format-critical": " {temperatureC}°C",
-        "interval": 2,
-        "on-click": "foot -e btop"
+        "format": "{temperatureC}°C",
+        "format-critical": "{temperatureC}°C",
+        "interval": 2
+    },
+    "tray": {
+        "icon-size": 13,
+        "spacing": 8
     },
     "battery": {
         "states": {
@@ -43,8 +50,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰚥 {capacity}%",
+        "format-charging": "󰂄",
+        "format-plugged": "󰚥",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "network": {
@@ -55,7 +62,7 @@
         "on-click": "~/.config/waybar/scripts/fuzzel-wifi.sh"
     },
     "wireplumber#sink": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}",
         "format-muted": "",
         "format-icons": ["", "", ""],
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -70,7 +77,7 @@
               "transition-left-to-right": false
         },
         "modules": [
-              "custom/power", // Главная кнопка, которая видна всегда
+              "custom/power",
               "custom/reboot",
               "custom/logout"
         ]

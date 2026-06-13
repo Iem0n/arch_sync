@@ -30,3 +30,8 @@ swaylock-effects-git
 swaybg
 libnotify
 fastfetch
+brightnessctl
+tlp
+tlp-pd
+tlp-rdw
+powertop
