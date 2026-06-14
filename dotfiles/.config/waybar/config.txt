@@ -1,0 +1,100 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 18,
+    "spacing": 2,
+    "margin": 0,
+    "modules-left": [
+        "niri/workspaces",
+        "temperature"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",              // Добавили системный трей сюда
+        "wireplumber#sink",
+        "network",
+        "battery",
+        "group/session"
+    ],
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            // Сменили иконки на минималистичные палочки/цифры или пустые кружки
+            "active": "󰮯", 
+            "default": "◇",
+            "urgent": "󰀨"
+        }
+    },
+    "clock": {
+        // Убрали один пробел между временем и датой (остался ровно один)
+        "format": "{:%H:%M %d %b}", 
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "temperature": {
+        "thermal-zone": 0,
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C",
+        "format-critical": "{temperatureC}°C",
+        "interval": 2
+    },
+    "tray": {
+        "icon-size": 13,
+        "spacing": 8
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄",
+        "format-plugged": "󰚥",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "network": {
+        "format-wifi": "󰖩",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{essid}",
+        "on-click": "~/.config/waybar/scripts/fuzzel-wifi.sh"
+    },
+    "wireplumber#sink": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "~/.config/waybar/scripts/fuzzel-audio.sh",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
+    },
+    "group/session": {
+        "orientation": "horizontal",
+        "drawer": {
+              "transition-duration": 300,
+              "transition-left-to-right": false
+        },
+        "modules": [
+              "custom/power",
+              "custom/reboot",
+              "custom/logout"
+        ]
+    },
+    "custom/power": {
+        "format": " ",
+        "on-click": "systemctl poweroff",
+        "tooltip-format": "Power Off"
+    },
+    "custom/reboot": {
+        "format": "  ",
+        "on-click": "systemctl reboot",
+        "tooltip-format": "Reboot"
+    },
+    "custom/logout": {
+        "format": " 󰈆 ",
+        "on-click": "niri msg action quit",
+        "tooltip-format": "Logout (Exit Niri)"
+    }
+}
