@@ -12,7 +12,7 @@ RED = "\033[0;31m"
 NC = "\033[0m"
 
 PROFILE_PATH = Path("profile.toml")
-DOT_DIR = Path.cwd() / "dotfiles"
+DOT_DIR = Path.cwd() / "."
 HOME_DIR = Path.home()
 
 
