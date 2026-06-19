@@ -1,0 +1,56 @@
+[meta]
+name = "vova-arch-minimal"
+description = "DevOps & TUI profile for ThinkPad T14"
+
+[packages]
+# Официальные пакеты из extra
+list = [
+    "telegram-desktop",
+    "firefox",
+    "niri",
+    "fuzzel",
+    "btop",
+    "alacritty",
+    "cpupower",
+    "spotify-launcher",
+    "zenity",
+    "ffmpeg",
+    "xwayland-satellite",
+    "xdg-desktop-portal-wlr",
+    "qt6-multimedia-ffmpeg",
+    "xdg-desktop-portal-gtk",
+    "ttf-jetbrains-mono-nerd",
+    "bluez",
+    "bluez-utils",
+    "wireplumber",
+    "pipewire",
+    "pipewire-alsa",
+    "noto-fonts-cjk",
+    "unzip",
+    "waybar",
+    "7zip",
+    "mako",
+    "swaybg",
+    "libnotify",
+    "fastfetch",
+    "brightnessctl",
+    "tlp",
+    "tlp-pd",
+    "tlp-rdw",
+    "powertop",
+    "greetd",
+    "greetd-tuigreet"
+]
+
+[configs]
+# Симлинки дотфайлов relative to $HOME
+targets = [
+    ".config/niri",
+    ".config/alacritty",
+    ".config/fuzzel",
+    ".config/waybar",
+    ".config/mako",
+    ".config/helix",
+    ".config/fastfetch",
+    ".bashrc"
+]
