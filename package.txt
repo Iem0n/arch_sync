@@ -4,7 +4,6 @@ niri
 fuzzel
 btop
 alacritty
-wine
 cpupower
 spotify-launcher
 zenity
@@ -23,10 +22,8 @@ pipewire-alsa
 noto-fonts-cjk
 unzip
 waybar
-yazi
 7zip
 mako
-swaylock-effects-git
 swaybg
 libnotify
 fastfetch
