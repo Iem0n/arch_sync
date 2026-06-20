@@ -12,7 +12,7 @@
         "clock"
     ],
     "modules-right": [
-        "tray",              // Добавили системный трей сюда
+        "tray",
         "wireplumber#sink",
         "network",
         "battery",
@@ -21,14 +21,12 @@
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            // Сменили иконки на минималистичные палочки/цифры или пустые кружки
             "active": "󰮯", 
             "default": "◇",
             "urgent": "󰀨"
         }
     },
     "clock": {
-        // Убрали один пробел между временем и датой (остался ровно один)
         "format": "{:%H:%M %d %b}", 
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
@@ -65,10 +63,8 @@
         "format": "{icon}",
         "format-muted": "",
         "format-icons": ["", "", ""],
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "~/.config/waybar/scripts/fuzzel-audio.sh",
-        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
-        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+"
+        "tooltip-format": "󰕾 Volume: {volume}%",
+        "on-click": "~/.config/waybar/scripts/fuzzel-audio.sh"
     },
     "group/session": {
         "orientation": "horizontal",

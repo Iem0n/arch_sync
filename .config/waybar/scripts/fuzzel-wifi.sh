@@ -1,39 +1,44 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# 1. Сканируем доступные сети вокруг
-wifi_list=$(nmcli --fields IN-USE,SSID,SECURITY device wifi list | sed 's/^IN-USE\s*//' | grep -v "SSID")
+# Активная сеть
+active_ssid=$(nmcli --terse --fields IN-USE,SSID device wifi list | grep "^*:" | cut -d':' -f2)
 
-# Показываем список сетей пользователю через fuzzel
-selected_node=$(echo "$wifi_list" | fuzzel --dmenu -i -p "󰖩 Сети:")
+# Список остальных сетей
+raw_list=$(nmcli --terse --fields SSID,SECURITY device wifi list | grep -v "^BSSID")
 
-# Если ничего не выбрали — просто выходим
+formatted_list=""
+if [ -n "$active_ssid" ]; then
+    formatted_list="󰖩  $active_ssid   [CONNECTED]\n"
+fi
+
+other_networks=$(echo "$raw_list" | grep -v "^:" | grep -w -v "$active_ssid" | sed 's/:/  │  /g' | sort -u)
+formatted_list="${formatted_list}${other_networks}"
+
+selected_node=$(echo -e "$formatted_list" | fuzzel --dmenu -i -p "󰖩 Сети:")
+
 if [ -z "$selected_node" ]; then
     exit 0
 fi
 
-# Вытягиваем чистый SSID (первое слово/имя сети)
-ssid=$(echo "$selected_node" | awk '{print $1}')
+if [[ "$selected_node" == *"[CONNECTED]"* ]]; then
+    notify-send "Wi-Fi" "Вы уже подключены к этой сети"
+    exit 0
+fi
 
-# 2. Проверяем, сохранена ли эта сеть уже в NetworkManager
-# grep -w ищет точное совпадение по имени профиля
+ssid=$(echo "$selected_node" | awk -F '  │  ' '{print $1}' | sed 's/[[:space:]]*$//')
 is_saved=$(nmcli connection show | grep -w "$ssid")
 
-if [ ! -z "$is_saved" ]; then
-    # Сеть уже известна системе! Подключаем без ввода пароля
-    notify-send "Wi-Fi" "Подключение к сохраненной сети $ssid..."
+if [ -n "$is_saved" ]; then
+    notify-send "Wi-Fi" "Подключение к $ssid..."
     nmcli connection up id "$ssid"
 else
-    # Сеть новая. Проверяем, запаролена ли она
     if [[ "$selected_node" == *"WPA"* || "$selected_node" == *"WEP"* ]]; then
-        # Запрашиваем пароль в красивом окошке fuzzel
         pass=$(fuzzel --dmenu --password -p "Пароль для $ssid:")
-        if [ ! -z "$pass" ]; then
+        if [ -n "$pass" ]; then
             notify-send "Wi-Fi" "Подключение к новой сети $ssid..."
             nmcli device wifi connect "$ssid" password "$pass"
         fi
     else
-        # Открытая новая сеть
-        notify-send "Wi-Fi" "Подключение к открытой сети $ssid..."
         nmcli device wifi connect "$ssid"
     fi
 fi
