@@ -3,7 +3,6 @@ name = "vova-arch-minimal"
 description = "DevOps & TUI profile for ThinkPad T14"
 
 [packages]
-# Официальные пакеты из extra
 list = [
     "telegram-desktop",
     "firefox",
@@ -43,7 +42,6 @@ list = [
 ]
 
 [configs]
-# Симлинки дотфайлов relative to $HOME
 targets = [
     ".config/niri",
     ".config/alacritty",
