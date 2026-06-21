@@ -42,7 +42,7 @@ layout {
 
 spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "mako"
-spawn-sh-at-startup "swaybg -m fill -i /home/vova/arch_sync/wallpapers/mountains.png"
+spawn-sh-at-startup "swaybg -m fill -i /home/vova/my-dotfiles/wallpapers/mountains.png"
 
 hotkey-overlay { skip-at-startup; }
 

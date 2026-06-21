@@ -23,6 +23,7 @@ list = [
     "bluez-utils",
     "wireplumber",
     "pipewire",
+    "pipewire-pulse",
     "pipewire-alsa",
     "noto-fonts-cjk",
     "unzip",
@@ -50,5 +51,6 @@ targets = [
     ".config/mako",
     ".config/helix",
     ".config/fastfetch",
+    ".config/xdg-desktop-portal/portals.conf",
     ".bashrc"
 ]
