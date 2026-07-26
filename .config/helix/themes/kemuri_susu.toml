@@ -1,0 +1,71 @@
+# Noctalia Shell Theme for Helix
+# Base Palette from Noctalia JSON (Dark Theme)
+
+# --- Syntax Highlighting ---
+"keyword" = { fg = "#cabaaa", modifiers = ["bold"] }        # mPrimary
+"type" = "#bfa67a"                                         # yellow
+"variable" = "#f0ede6"                                     # mOnSurface / white
+"variable.builtin" = "#cabaaa"                             # mPrimary
+"constant" = "#b38f99"                                     # magenta
+"comment" = { fg = "#73685F", modifiers = ["italic"] }     # mSecondary (muted ground)
+
+"string" = "#8ca38a"                                       # green
+"char" = "#a3b8a1"                                         # bright green
+"escape" = "#7fa39a"                                       # cyan
+
+"function" = "#78909c"                                     # blue
+"function.builtin" = "#8fa7b3"                             # bright blue
+
+"tag" = "#78909c"                                          # blue
+"attribute" = "#7fa39a"                                    # cyan
+
+"punctuation" = "#cabaaa"                                  # mOnSurfaceVariant
+"operator" = "#cabaaa"
+
+"special" = "#b38f99"                                      # magenta
+
+# --- Interface ---
+"ui.background" = { bg = "#1e1d1b" }                       # mSurface (Deep dark brown/black)
+"ui.text" = "#f0ede6"                                      # mOnSurface (Warm off-white)
+"ui.text.focus" = "#fafbfe"                                # bright white
+
+"ui.cursor" = { fg = "#282624", bg = "#f0ede6" }           # cursorText + cursor
+"ui.cursor.match" = { fg = "#1e1d1b", bg = "#cabaaa", modifiers = ["bold"] }
+
+# Строка состояния (Statusline)
+"ui.statusline" = { fg = "#cabaaa", bg = "#282624" }       # mOnSurfaceVariant + mSurfaceVariant
+"ui.statusline.inactive" = { fg = "#594F46", bg = "#1e1d1b" } # mTertiary + mSurface
+
+# Выделение (Selection)
+"ui.selection" = { bg = "#34312d" }                        # bright black / outline layer
+"ui.selection.primary" = { bg = "#594F46" }                # mTertiary
+
+# Подсветка текущей строки
+"ui.cursorline" = { bg = "#282624" }                       # mSurfaceVariant
+
+# Поля и разделители
+"ui.linenr" = "#594F46"                                    # mTertiary
+"ui.linenr.selected" = "#cabaaa"                           # mPrimary
+"ui.window" = "#34312d"                                    # mOutline (тонкие границы окон)
+
+# Меню автодополнения и всплывающие окна
+"ui.menu" = { fg = "#f0ede6", bg = "#282624" }             # mOnSurface + mSurfaceVariant
+"ui.menu.selected" = { fg = "#1e1d1b", bg = "#cabaaa" }    # selectionFg + selectionBg
+
+# Документация / Ошибки / Предупреждения
+"ui.help" = { fg = "#f0ede6", bg = "#282624" }
+"ui.popup" = { bg = "#282624" }
+
+"warning" = "#bfa67a"                                      # yellow
+"error" = "#cf7670"                                        # mError / red
+"info" = "#78909c"                                         # blue
+"hint" = "#7fa39a"                                         # cyan
+
+# --- Diagnostics inside code ---
+"diagnostic.error" = { underline = { color = "#cf7670", style = "curly" } }
+"diagnostic.warning" = { underline = { color = "#bfa67a", style = "curly" } }
+
+# --- Version Control (Git) ---
+"diff.plus" = "#8ca38a"                                    # green
+"diff.delta" = "#bfa67a"                                   # yellow
+"diff.minus" = "#cf7670"                                   # red

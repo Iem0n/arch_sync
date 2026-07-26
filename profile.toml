@@ -1,18 +1,15 @@
 [meta]
-name = "vova-arch-minimal"
-description = "DevOps & TUI profile for ThinkPad T14"
+name = "arch-minimal"
+description = "ThinkPad x220"
 
 [packages]
 list = [
-    "telegram-desktop",
     "firefox",
     "niri",
     "fuzzel",
-    "btop",
+    "htop",
     "alacritty",
     "cpupower",
-    "spotify-launcher",
-    "zenity",
     "ffmpeg",
     "xwayland-satellite",
     "xdg-desktop-portal-wlr",
@@ -27,19 +24,12 @@ list = [
     "pipewire-alsa",
     "noto-fonts-cjk",
     "unzip",
-    "waybar",
-    "7zip",
-    "mako",
-    "swaybg",
-    "libnotify",
     "fastfetch",
     "brightnessctl",
     "tlp",
     "tlp-pd",
     "tlp-rdw",
     "powertop",
-    "greetd",
-    "greetd-tuigreet"
 ]
 
 [configs]
@@ -47,8 +37,6 @@ targets = [
     ".config/niri",
     ".config/alacritty",
     ".config/fuzzel",
-    ".config/waybar",
-    ".config/mako",
     ".config/helix",
     ".config/fastfetch",
     ".config/xdg-desktop-portal/portals.conf",

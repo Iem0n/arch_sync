@@ -1,3 +1,6 @@
+[general]
+import = ["~/.config/alacritty/themes/noctalia.toml"]
+
 [window]
 dynamic_padding = true
 opacity = 0.96 # Твоя прозрачность 'dd'
@@ -11,24 +14,3 @@ size = 12.0
 [cursor]
 style = { shape = "Block", blinking = "Always" }
 
-[colors.primary]
-background = "0x111214" 
-foreground = "0xc5c8c6"
-
-[colors.normal]
-black   = "0x1d1f21"
-red     = "0xe67e80"
-green   = "0xb5bd68"
-yellow  = "0xf0c674"
-blue    = "0x81a2be"
-magenta = "0xb294bb"
-cyan    = "0x81beb7"
-white   = "0xc5c8c6"
-
-[colors.cursor]
-text = "0x1d1f21"
-cursor = "0xffffff"
-
-[colors.selection]
-text = "0xffffff"
-background = "0x282a2e"

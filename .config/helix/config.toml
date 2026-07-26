@@ -1,4 +1,4 @@
-theme = "my_monochrome" # Указываем имя нашей будущей кастомной темы
+theme = "kemuri_susu" # Указываем имя нашей будущей кастомной темы
 
 [editor]
 line-number = "relative"

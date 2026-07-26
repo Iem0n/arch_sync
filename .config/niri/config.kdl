@@ -14,17 +14,15 @@ input {
   }
 }
 
-output "eDP-1" {
-  mode "1920x1200@60.003"
-  scale 1.5
+output "LVDS-1" {
+  mode "1366x768@60.002"
+  scale 1
   hot-corners { off; }
 }
 
 layout {
   gaps 5
-
   center-focused-column "never"
-
   preset-column-widths {    
     proportion 0.33333
     proportion 0.5
@@ -40,12 +38,9 @@ layout {
   }
 }
 
-spawn-sh-at-startup "waybar"
-spawn-sh-at-startup "mako"
-spawn-sh-at-startup "swaybg -m fill -i /home/vova/my-dotfiles/wallpapers/mountains.png"
+spawn-at-startup "noctalia"
 
 hotkey-overlay { skip-at-startup; }
-
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 binds {
