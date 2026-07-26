@@ -33,7 +33,7 @@ def main():
         log_error(f"Файл профиля {PROFILE_PATH} не найден!")
         sys.exit(1)
 
-    log_info("Запуск автоматизации из профиля TOML (Python-style)...")
+    log_info("Запуск автоматизации из профиля TOML...")
 
     # Читаем TOML
     with open(PROFILE_PATH, "rb") as f:
@@ -104,25 +104,11 @@ def main():
     else:
         print("Список таргетов в профиле пуст.")
 
-    # 3. Синхронизация обоев
-    wallpapers_src = Path("wallpapers")
-    if wallpapers_src.is_dir():
-        log_info("Синхронизация обоев...")
-        wallpapers_dest = HOME_DIR / "Pictures" / "wallpapers"
-        wallpapers_dest.mkdir(parents=True, exist_ok=True)
-
-        import shutil
-
-        for wall in wallpapers_src.iterdir():
-            if wall.is_file():
-                shutil.copy2(wall, wallpapers_dest / wall.name)
-
     # 4. Обновление кэша шрифтов
     log_info("Обновление кэша шрифтов...")
     subprocess.run(["fc-cache", "-fv"], stdout=subprocess.DEVNULL)
 
-    log_success("==> Готово! Профиль успешно применен на Python.")
-
+    log_success("==> Готово! Профиль успешно применен.")
 
 if __name__ == "__main__":
     main()
